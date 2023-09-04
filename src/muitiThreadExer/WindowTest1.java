@@ -1,4 +1,4 @@
-/*
+package muitiThreadExer;/*
 * 创建线程的方式2: 实现runnable接口
 *
 * 出现了多线程的安全问题 ------> 使用java同步机制解决

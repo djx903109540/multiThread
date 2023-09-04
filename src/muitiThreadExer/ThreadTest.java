@@ -1,3 +1,5 @@
+package muitiThreadExer;
+
 class MyThread extends Thread{
 
     //遍历100以内的偶数

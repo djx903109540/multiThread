@@ -1,4 +1,4 @@
-
+package muitiThreadExer;
 /*
 * 多线程实践   实现多窗口卖票
 *
