@@ -11,16 +11,25 @@ class Window extends Thread{
     //票
     private static int ticket = 100;
 
+    //同步监视器
+    static Object obj = new Object();
+
     @Override
     public void run() {
 
         while(true){
-            if(ticket > 0){
-                System.out.println(Thread.currentThread().getName() + ": 第" + ticket + "张票已卖出");
-                ticket--;
-            }
-            else{
-                break;
+            synchronized (obj) {
+                if (ticket > 0) {
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    System.out.println(Thread.currentThread().getName() + ": 第" + ticket + "张票已卖出");
+                    ticket--;
+                } else {
+                    break;
+                }
             }
         }
 
