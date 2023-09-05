@@ -12,12 +12,13 @@ class Window extends Thread{
     private static int ticket = 100;
 
     //同步监视器
-    static Object obj = new Object();
+    private static Object obj = new Object();
 
     @Override
     public void run() {
 
         while(true){
+            //除了obj还可以用类对象Window.class
             synchronized (obj) {
                 if (ticket > 0) {
                     try {

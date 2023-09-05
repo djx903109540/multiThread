@@ -16,6 +16,7 @@ class MThread implements Runnable{
     public void run() {
         //使用synchronized关键字
         while (true) {
+            //除了obj还可以用this关键字
             synchronized (obj) {
                 if (ticket > 0) {
                     try {
