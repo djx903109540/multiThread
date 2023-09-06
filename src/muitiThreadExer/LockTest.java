@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 class Window2 implements Runnable{
 
     //票
-    private int ticket = 100;
+    private static int ticket = 100;
 
     //锁对象
     private ReentrantLock lock = new ReentrantLock();
