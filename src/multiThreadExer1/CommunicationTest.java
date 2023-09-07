@@ -18,7 +18,7 @@ class Number implements Runnable{
 
                 if (number <= 100) {
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(10);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
@@ -30,6 +30,9 @@ class Number implements Runnable{
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
+                }
+                else{
+                    break;
                 }
             }
         }
