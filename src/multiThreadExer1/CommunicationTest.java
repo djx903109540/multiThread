@@ -13,7 +13,7 @@ class Number implements Runnable{
         while (true){
             synchronized (this) {
 
-                //唤醒
+                //唤醒 多个用notifyAll()
                 notify();
 
                 if (number <= 100) {
