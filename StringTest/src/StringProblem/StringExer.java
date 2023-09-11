@@ -10,8 +10,8 @@ public class StringExer {
     public void Test1(){
         String str = "     my trim";
         int len = str.length();
-        int leftBlank = 0;
-        int rightBlank = 0;
+        int leftBlank;
+        int rightBlank;
         for(leftBlank = 0; leftBlank < len; leftBlank++){
             if(str.charAt(leftBlank) != ' '){
                 break;
@@ -26,4 +26,21 @@ public class StringExer {
         System.out.println(str1);
     }
 
+    //指定字符串反转
+    @Test
+    public void Test2(){
+        String str = "abcdefg";
+        int start = 3;
+        int end = 6;
+        char[] arr = str.toCharArray();
+        while (start  < end){
+            char temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        String res = new String(arr);
+        System.out.println(res);
+    }
 }
