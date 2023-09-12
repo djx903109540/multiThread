@@ -76,13 +76,13 @@ public class StringExer {
         int len = str2.length();
         int curLen = len;
         int f = 0;
-        String res = "";
+        StringBuilder res = new StringBuilder();
         while (curLen > 0){
             for(int i = 0; i <= len - curLen; i++){
                 String curStr = str2.substring(i, i + curLen);
                 if(str1.contains(curStr)){
                     f = 1;
-                    res = curStr;
+                    res.append(curStr);
                     break;
                 }
             }
