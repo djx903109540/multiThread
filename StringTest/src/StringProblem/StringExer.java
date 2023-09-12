@@ -2,6 +2,9 @@ package StringProblem;
 
 import org.junit.Test;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class StringExer {
 
 
@@ -88,6 +91,16 @@ public class StringExer {
             }
             curLen--;
         }
+        System.out.println(res);
+    }
+
+    //对字符串中字符进行排序
+    @Test
+    public void Test5(){
+        String str = "cvhellobnm";
+        char[] arr = str.toCharArray();
+        Arrays.sort(arr);
+        String res = new String(arr);
         System.out.println(res);
     }
 }
