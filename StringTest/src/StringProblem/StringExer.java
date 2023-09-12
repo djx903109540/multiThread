@@ -64,4 +64,30 @@ public class StringExer {
         }
         System.out.println("目标字符串出现的次数是：" + counter + "次");
     }
+
+    //获取两个字符串中的最大相同子串
+    @Test
+    public void Test4(){
+        String str1 = "abcwerthelloyuiodef";
+        String str2 = "cvhellobnm";
+        int len = str2.length();
+        int curLen = len;
+        int f = 0;
+        String res = "";
+        while (curLen > 0){
+            for(int i = 0; i <= len - curLen; i++){
+                String curStr = str2.substring(i, i + curLen);
+                if(str1.contains(curStr)){
+                    f = 1;
+                    res = curStr;
+                    break;
+                }
+            }
+            if(f == 1){
+                break;
+            }
+            curLen--;
+        }
+        System.out.println(res);
+    }
 }
