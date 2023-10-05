@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SetTest/SetTest.iml" filepath="$PROJECT_DIR$/SetTest/SetTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringTest/StringTest.iml" filepath="$PROJECT_DIR$/StringTest/StringTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/multiTread.iml" filepath="$PROJECT_DIR$/multiTread.iml" />
     </modules>
